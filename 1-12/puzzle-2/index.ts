@@ -22,11 +22,10 @@ rl.on('close', () => {
 
 function calculateFuel(mass: number): number {
     let totalFuel = 0;
-    let leftMass = mass;
-    while (leftMass > 0) {
-        leftMass = Math.floor(leftMass / 3) - 2;
-        if (leftMass > 0) {
-            totalFuel += leftMass;
+    while (mass > 0) {
+        mass = Math.floor(mass / 3) - 2;
+        if (mass > 0) {
+            totalFuel += mass;
         }
     }
 
