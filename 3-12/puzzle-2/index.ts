@@ -6,9 +6,15 @@ const rl = readline.createInterface({
     input: fs.createReadStream(path.join(__dirname, "./input.txt"))
 });
 
-let ops: string;
-
-rl.on('line', (line: string) => ops = JSON.stringify(line.split(',').map(num => parseInt(num))));
+let firstWire;
+let secondWire;
+rl.on('line', (line: string) => {
+    if(! firstWire) {
+        firstWire = line;
+    } else {
+        secondWire = line
+    }
+});
 
 rl.on('close', () => {
     
