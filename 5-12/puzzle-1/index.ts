@@ -23,6 +23,9 @@ rl.on('close', () => {
             case 2: 
                 ops[ops[step+3]] = ops[ops[step+1]] * ops[ops[step+2]]
                 break;
+            case 3: 
+                break;
+                
         }
 
         step += 4;
